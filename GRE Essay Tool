@@ -1,0 +1,20 @@
+<!-- html code goes here -->
+<body>
+<!-- the entire body must be written by student -->
+<textarea id="evaluatedText" rows="10" placeholder="Enter letter"></textarea>
+<h3 id="wordCount">0</h3>
+<script type="text/javascript" src="./script.js">
+</script>
+
+ <---- js part ---->
+
+const input_area = document.getElementById("evaluatedText");
+const wordCount=document.getElementById("wordCount");
+
+
+
+input_area.addEventListener("input",()=>{ 
+    let txt =input_area.value.trim();
+    wordCount.textContent=txt.split(/\s+/).filter(
+        (item) => item).length;
+    });
